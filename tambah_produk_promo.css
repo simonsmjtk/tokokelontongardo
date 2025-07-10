@@ -1,0 +1,103 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5faff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #1976d2;
+  margin-top: 32px;
+  text-align: center;
+}
+
+form {
+  background: #fff;
+  max-width: 400px;
+  margin: 32px auto 0 auto;
+  padding: 28px 24px 18px 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.08);
+  border: 1.5px solid #e3f2fd;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border: 1.5px solid #b3e5fc;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f7fbff;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #2196f3 60%, #1976d2 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.13);
+}
+
+a {
+  display: inline-block;
+  margin: 18px auto 0 auto;
+  text-align: center;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 6px 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+a:hover {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.btn-kembali {
+  display: inline-block;
+  margin: 16px 0;
+  padding: 10px 22px;
+  background: #e3f2fd;
+  color: #1976d2;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  border: 1.5px solid #90caf9;
+  transition: background 0.18s, color 0.18s;
+}

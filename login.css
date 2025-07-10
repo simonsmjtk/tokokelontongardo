@@ -1,0 +1,243 @@
+body {
+  background: #eaf4ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  /* Banyak gambar produk sembako sebagai background */
+  background-image: url("https://img.icons8.com/color/96/000000/rice-bowl.png"),
+    /* Beras */ url("https://img.icons8.com/color/96/000000/bottle-of-wine.png"),
+    /* Minyak goreng */
+      url("https://img.icons8.com/color/96/000000/sugar-cubes.png"),
+    /* Gula */ url("https://img.icons8.com/color/96/000000/noodles.png"),
+    /* Mie instan */ url("https://img.icons8.com/color/96/000000/egg.png"),
+    /* Telur */ url("https://img.icons8.com/color/96/000000/coffee.png"),
+    /* Kopi */ url("https://img.icons8.com/color/96/000000/tea.png"),
+    /* Teh */ url("https://img.icons8.com/color/96/000000/soy-sauce.png"),
+    /* Kecap */ url("https://img.icons8.com/color/96/000000/bread.png"),
+    /* Roti */ url("https://img.icons8.com/color/96/000000/milk-bottle.png"),
+    /* Susu */ url("https://img.icons8.com/color/96/000000/apple.png"),
+    /* Buah */ url("https://img.icons8.com/color/96/000000/cheese.png"),
+    /* Ayam */ url("https://img.icons8.com/color/96/000000/water-bottle.png"),
+    /* Air mineral */ url("https://img.icons8.com/color/96/000000/soap.png"); /* Sabun */
+  background-size: 60px, 60px, 60px, 60px, 60px, 60px, 60px, 60px, 60px, 60px,
+    60px, 60px, 60px, 60px, 60px;
+  background-position: 8% 10%, 80% 20%, 20% 80%, 70% 70%, 50% 50%, 15% 60%,
+    60% 15%, 90% 80%, 35% 30%, 75% 60%, 40% 90%, 60% 85%, 10% 60%, 85% 40%,
+    55% 20%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat;
+}
+.login-box {
+  width: 100%;
+  max-width: 370px;
+  padding: 32px 24px 24px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0, 122, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  color: #007aff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #cce2ff;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  background: #f7fbff;
+  transition: border 0.2s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1.5px solid #007aff;
+  outline: none;
+  background: #eaf4ff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 13px 0;
+  background: linear-gradient(90deg, #007aff 60%, #4fc3f7 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #eaf4ff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-bottom: 10px;
+}
+button[type="submit"]:hover {
+  background: #005ecb;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.error {
+  color: #d32f2f;
+  background: #ffeaea;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.login-box p {
+  margin-top: 14px;
+  font-size: 1rem;
+  color: #555;
+}
+.login-box a {
+  color: #007aff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.login-box a:hover {
+  color: #005ecb;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Geser ke kanan */
+  justify-content: center;
+  min-height: 100vh;
+  padding-right: 8vw; /* Tambah jarak dari kanan layar */
+}
+.welcome-title {
+  color: #007aff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: right;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  body {
+    background-size: 36px, 36px, 36px, 36px, 36px, 36px, 36px, 36px, 36px, 36px,
+      36px, 36px, 36px, 36px;
+    background-position: 10% 5%, 80% 20%, 10% 80%, 80% 85%, 50% 30%, 15% 60%,
+      70% 10%, 80% 75%, 35% 55%, 65% 60%, 40% 90%, 60% 85%, 10% 60%, 85% 40%;
+  }
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    padding-right: 8vw;
+  }
+  .login-box {
+    max-width: 97vw;
+    min-width: 0;
+    padding: 18px 2vw 20px 2vw;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px 0 rgba(31, 38, 135, 0.08);
+    margin: 0 1vw;
+  }
+  .welcome-title {
+    color: #007aff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: right;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+  h2 {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+  button[type="submit"] {
+    font-size: 1.08rem;
+    padding: 13px 0;
+    border-radius: 14px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 1.08rem;
+    padding: 13px 12px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+    /* background icons lebih kecil */
+    background-size: 30px, 30px, 30px, 30px, 30px, 30px, 30px, 30px, 30px, 30px,
+      30px, 30px, 30px;
+    background-position: 8% 8%, 80% 10%, 12% 82%, 70% 72%, 50% 60%, 18% 60%,
+      60% 18%, 88% 75%, 35% 40%, 75% 75%, 40% 93%, 67% 85%, 18% 60%, 87% 46%;
+  }
+  .login-box {
+    max-width: 99vw;
+    width: 98vw;
+    margin: 0 auto;
+    padding: 22px 5vw 20px 5vw;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px 0 rgba(31, 38, 135, 0.09);
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 1.12rem;
+    padding: 15px 14px;
+    border-radius: 12px;
+  }
+  button[type="submit"] {
+    font-size: 1.09rem;
+    border-radius: 15px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-box {
+    padding: 12px 2vw 12px 2vw;
+    border-radius: 10px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Hilangkan tap highlight di iOS/Android */
+input,
+button {
+  -webkit-tap-highlight-color: transparent;
+}

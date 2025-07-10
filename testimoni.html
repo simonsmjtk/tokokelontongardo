@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Testimoni Pelanggan - Toko Ardo</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f9fb;
+        margin: 0;
+        padding: 0;
+      }
+      .testimoni-container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px #e3e3e3;
+        padding: 32px 28px 24px 28px;
+      }
+      .testimoni-title {
+        text-align: center;
+        font-size: 2em;
+        color: #3498db;
+        margin-bottom: 18px;
+        font-weight: bold;
+      }
+      .testimoni-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .testimoni-item {
+        border-left: 5px solid #a084ee;
+        background: #f6f3ff;
+        margin-bottom: 22px;
+        padding: 18px 22px 14px 18px;
+        border-radius: 8px;
+        position: relative;
+      }
+      .testimoni-item:last-child {
+        margin-bottom: 0;
+      }
+      .testimoni-nama {
+        font-weight: bold;
+        color: #6c47c7;
+        margin-bottom: 4px;
+      }
+      .testimoni-tanggal {
+        font-size: 0.95em;
+        color: #aaa;
+        margin-bottom: 8px;
+      }
+      .testimoni-isi {
+        font-size: 1.1em;
+        color: #444;
+        margin-bottom: 0;
+      }
+      .testimoni-form {
+        margin-top: 32px;
+        padding-top: 18px;
+        border-top: 1px solid #eee;
+      }
+      .testimoni-form label {
+        display: block;
+        margin-bottom: 6px;
+        color: #555;
+        font-weight: 500;
+      }
+      .testimoni-form input,
+      .testimoni-form textarea {
+        width: 100%;
+        padding: 8px 10px;
+        margin-bottom: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+        font-family: inherit;
+      }
+      .testimoni-form button {
+        background: #a084ee;
+        color: #fff;
+        border: none;
+        padding: 10px 28px;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+      }
+      .testimoni-form button:hover {
+        background: #6c47c7;
+      }
+      .testimoni-success {
+        background: #e6fbe8;
+        color: #27ae60;
+        border: 1px solid #b6e2c8;
+        padding: 10px 16px;
+        border-radius: 6px;
+        margin-bottom: 18px;
+        text-align: center;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testimoni-container">
+      <div class="testimoni-title">Testimoni Pelanggan</div>
+      <ul class="testimoni-list" id="testimoniList">
+        <li class="testimoni-item">
+          <div class="testimoni-nama">Andi Saputra</div>
+          <div class="testimoni-tanggal">28-06-2025</div>
+          <div class="testimoni-isi">
+            Pelayanan ramah, harga murah, dan barang lengkap. Sukses selalu Toko
+            Ardo!
+          </div>
+        </li>
+        <li class="testimoni-item">
+          <div class="testimoni-nama">Siti Rahma</div>
+          <div class="testimoni-tanggal">27-06-2025</div>
+          <div class="testimoni-isi">
+            Belanja di sini selalu puas, pengiriman cepat dan produk
+            berkualitas.
+          </div>
+        </li>
+        <li class="testimoni-item">
+          <div class="testimoni-nama">Budi Santoso</div>
+          <div class="testimoni-tanggal">25-06-2025</div>
+          <div class="testimoni-isi">
+            Toko langganan keluarga kami. Terima kasih Toko Ardo!
+          </div>
+        </li>
+      </ul>
+      <form
+        class="testimoni-form"
+        id="testimoniForm"
+        autocomplete="off"
+        onsubmit="return tambahTestimoni();"
+      >
+        <div class="testimoni-success" id="testimoniSuccess">
+          Terima kasih, testimoni Anda telah dikirim!
+        </div>
+        <label for="nama">Nama Anda</label>
+        <input type="text" id="nama" name="nama" required maxlength="32" />
+        <label for="isi">Testimoni</label>
+        <textarea
+          id="isi"
+          name="isi"
+          rows="3"
+          required
+          maxlength="200"
+        ></textarea>
+        <div style="display: flex; gap: 12px">
+          <button type="submit">Kirim Testimoni</button>
+          <a
+            href="index.php"
+            style="
+              display: inline-block;
+              background: #0227fd;
+              color: #ffffff;
+              padding: 10px 28px;
+              border-radius: 6px;
+              text-decoration: none;
+              font-weight: bold;
+              border: 1px solid #ccc;
+              transition: background 0.2s;
+            "
+            >Kembali ke Beranda</a
+          >
+        </div>
+      </form>
+    </div>
+    <!-- ...existing HTML... -->
+    <script>
+      // Ganti seluruh isi <script> dengan kode berikut
+
+      // Simpan testimoni ke localStorage setiap kali tambah
+      function tambahTestimoni() {
+        var nama = document.getElementById("nama").value.trim();
+        var isi = document.getElementById("isi").value.trim();
+        if (!nama || !isi) return false;
+
+        var now = new Date();
+        var tgl =
+          now.getDate().toString().padStart(2, "0") +
+          "-" +
+          (now.getMonth() + 1).toString().padStart(2, "0") +
+          "-" +
+          now.getFullYear();
+
+        var li = document.createElement("li");
+        li.className = "testimoni-item";
+        li.innerHTML =
+          '<div class="testimoni-nama">' +
+          escapeHtml(nama) +
+          "</div>" +
+          '<div class="testimoni-tanggal">' +
+          tgl +
+          "</div>" +
+          '<div class="testimoni-isi">' +
+          escapeHtml(isi) +
+          "</div>";
+
+        var list = document.getElementById("testimoniList");
+        list.insertBefore(li, list.firstChild);
+
+        // Simpan ke localStorage
+        var data = JSON.parse(localStorage.getItem("testimoniArdo") || "[]");
+        data.unshift({ nama: nama, tanggal: tgl, isi: isi });
+        localStorage.setItem("testimoniArdo", JSON.stringify(data));
+
+        document.getElementById("testimoniForm").reset();
+        var notif = document.getElementById("testimoniSuccess");
+        notif.style.display = "block";
+        setTimeout(function () {
+          notif.style.display = "none";
+        }, 2500);
+
+        return false;
+      }
+
+      // Saat halaman dibuka, tampilkan testimoni dari localStorage
+      window.addEventListener("DOMContentLoaded", function () {
+        var data = JSON.parse(localStorage.getItem("testimoniArdo") || "[]");
+        var list = document.getElementById("testimoniList");
+        data.forEach(function (item) {
+          var li = document.createElement("li");
+          li.className = "testimoni-item";
+          li.innerHTML =
+            '<div class="testimoni-nama">' +
+            escapeHtml(item.nama) +
+            "</div>" +
+            '<div class="testimoni-tanggal">' +
+            item.tanggal +
+            "</div>" +
+            '<div class="testimoni-isi">' +
+            escapeHtml(item.isi) +
+            "</div>";
+          list.insertBefore(li, list.firstChild);
+        });
+      });
+
+      // Fungsi sederhana untuk mencegah XSS
+      function escapeHtml(text) {
+        var map = {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;",
+        };
+        return text.replace(/[&<>"']/g, function (m) {
+          return map[m];
+        });
+      }
+    </script>
+  </body>
+</html>

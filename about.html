@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tentang Toko Kelontong Ardo" />
+    <title>About - Toko Kelontong Ardo</title>
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Tentang Toko Kelontong Ardo</h1>
+        <nav>
+      <button onclick="location.href='index.php'">Home</button>
+      <button onclick="location.href='about.html'">About</button>
+      <button onclick="location.href='contact.html'">Contact</button>
+      <button onclick="location.href='produk.php'">Produk</button>
+      <button onclick="location.href='testimoni.html'">Testimoni</button>
+    </nav>
+    </header>
+    <section class="about-section">
+<section class="about-section">
+  <h2>Galeri Toko Kelontong Ardo</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="img/toko1.png" alt="Rak Atas" onclick="openModal(this.src, 'Rak Atas')" />
+      <p class="caption">Rak Atas</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/toko2.png" alt="Rak Tengah" onclick="openModal(this.src, 'Rak Tengah')" />
+      <p class="caption">Rak Tengah</p>
+    </div>
+    <div class="gallery-item">
+      <img src="img/toko3.png" alt="Rak Minuman & Sembako" onclick="openModal(this.src, 'Rak Minuman & Sembako')" />
+      <p class="caption">Rak Atas</p>
+    </div>
+  </div>
+ <div id="lightbox" class="lightbox" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</section>
+        <h2>Owner Toko Kelontong Ardo</h2>
+        <img src="img/owner.jpg" alt="Foto Pemilik Toko" class="owner-photo">
+        <p><strong>Nama:</strong>  Simon Leonardo Simanjuntak</p>
+        <p><strong>Umur:</strong>  20 </p>
+        <h2>Visi dan Misi</h2>
+        <p><strong>Visi:</strong> Menjadi toko kelontong terpercaya dengan produk berkualitas dan harga terjangkau.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+            <li>Menyediakan produk kebutuhan sehari-hari berkualitas tinggi.</li>
+            <li>Memberikan pelayanan ramah dan profesional.</li>
+            <li>Menjaga harga tetap bersaing untuk semua kalangan.</li>
+        </ul>
+
+
+      <h2>Nilai-Nilai Toko</h2>
+      <ul>
+        <li><strong>Integritas:</strong> Selalu jujur dan dapat dipercaya.</li>
+        <li>
+          <strong>Pelayanan Prima:</strong> Mengutamakan kepuasan pelanggan.
+        </li>
+        <li>
+          <strong>Harga Terjangkau:</strong> Menyediakan produk berkualitas
+          dengan harga terbaik.
+        </li>
+      </ul>
+
+      <h2>Sejarah Singkat</h2>
+      <p>
+        Toko Kelontong Ardo didirikan pada tahun 2020 dengan tujuan untuk
+        menyediakan produk kebutuhan sehari-hari bagi masyarakat. Dengan
+        pelayanan yang ramah dan harga terjangkau, toko ini telah menjadi
+        pilihan banyak pelanggan.
+      </p>
+<script>
+  function openModal(src, caption) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox-caption").textContent = caption;
+    document.getElementById("lightbox").style.display = "flex";
+    event.stopPropagation();
+  }
+  function closeModal() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+  </body>
+</html>
